@@ -47,7 +47,7 @@ int main(void)
    t = time(NULL);
    struct tm endTime = *localtime(&t);
    printf("End Time: %02d:%02d:%02d\n", endTime.tm_hour, endTime.tm_min, endTime.tm_sec);
-   printf("Time Lapse: %02d:%02d:%02d\n", startTime.tm_hour - endTime.tm_hour, startTime.tm_min - endTime.tm_min, startTime.tm_sec - endTime.tm_sec);
+   printf("Time Lapse (Hours:Minutes:Seconds): %02d:%02d:%02d\n", endTime.tm_hour - startTime.tm_hour, endTime.tm_min - startTime.tm_min, endTime.tm_sec - startTime.tm_sec);
    printf("Number of Primes Found: %d \n", primesCounter);
 
    return 0;
